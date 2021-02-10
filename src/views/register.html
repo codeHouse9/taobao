@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../style/register.css">
+</head>
+
+<body>
+  @@include("./common/headNav.html");
+  <header class=".register w">
+    <h1>
+      <a href="../index.html"></a>用户注册
+    </h1>
+  </header>
+  <main id="reg-main" class="w">
+    <form action="#">
+      <div><label for="user">用户名：</label><input id="user" type="text" placeholder="请输入用户名"></div>
+      <div><label for="pass">密码：</label> <input id="pass" type="text" placeholder="请输入密码"></div>
+      <a href="#" class="reg-enter">同意协议并注册</a>
+      <p>已阅读并同意以下协议<a href="#">淘宝平台服务协议、隐私权政策、法律声明、支付宝及客户端服务协议</a></p>
+      <a class="q" href="#">切换成企业账户注册</a>
+    </form>
+  </main>
+  @@include("./common/footNav.html");
+  <script src="../js/register.js" type="module"></script>
+</body>
+
+</html>

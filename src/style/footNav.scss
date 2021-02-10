@@ -1,0 +1,40 @@
+@import "./base.scss";
+#foot {
+  padding: 8px 0;
+  margin: 0px auto;
+  line-height: 28px;
+  color: #9c9c9c;
+  a {
+    color: #6c6c6c;
+    margin: 0 7px;
+  }
+  a:hover {
+    color: #ff5500;
+  }
+  .app {
+    border: 1px solid rgb(221, 218, 218);
+    padding: 10px 0;
+    overflow: hidden;
+    border-left: 0;
+    border-right: 0;
+    color: #ddd;
+    padding-right: 75px;
+  }
+  .last {
+    .img {
+      float: left;
+      width: 20px;
+      height: 20px;
+      margin: 0 4px;
+      background: url(../img/home/sp2.jpg) no-repeat;
+      background-position: -861px 0;
+    }
+  }
+  .img1 {
+    display: block;
+    width: 1190px;
+    img {
+      width: 100%;
+    }
+  }
+}

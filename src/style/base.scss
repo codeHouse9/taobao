@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.w {
+  width: 1190px;
+  margin: 0 auto;
+}
+body,
+html {
+  font-size: 12px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+  font-weight: 400;
+}
+em,
+i {
+  font-style: normal;
+}
+a {
+  text-decoration-line: none;
+  color: #ccc;
+}
+a:hover {
+  color: #ff5000;
+}
+input,
+button {
+  outline: none;
+  border: 0;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+li {
+  list-style: none;
+}
+.login-img {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  display: inline-block;
+}

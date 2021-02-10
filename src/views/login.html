@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+  <link rel="stylesheet" href="../img/iconfont/iconfont.css">
+  <link rel="stylesheet" href="../style/login.css">
+</head>
+
+<body>
+  <header class="w" id="login-page">
+    <h1>
+      <a href="../index.html">淘宝</a>
+    </h1>
+    <a href="#" class="advice"><span class="iconfont icon-tousuyujianyi"></span>"登录页面"改进建议</a>
+  </header>
+  <main id="main">
+    <div class="main w">
+      <div class="login">
+        <div class="tit">
+          <span class="active">密码登录</span>
+          <span>短信登录</span>
+        </div>
+        <form action="#" class="pass-form">
+          <div>
+            <span class="iconfont icon-gouwuche1"></span>
+            <input type="text" id="login-name" placeholder="会员名/手机号/邮箱">
+          </div>
+          <div>
+            <span class="iconfont icon-suo"></span>
+            <input type="text" id="login-pass" placeholder="请输入登录密码">
+          </div>
+          <div class="btn" id="pass-login">登录</div>
+          <div class="check-login">
+            <a href="#"><span class="iconfont icon-weibo-copy "></span>微博登录</a>
+            <a href="#"><span class="iconfont icon-zhifubao"></span>支付宝登录</a>
+          </div>
+          <p>
+            <a href="#">忘记密码</a>
+            <a href="#"> 忘记用户名</a>
+            <a href="register.html">免费注册</a>
+          </p>
+        </form>
+        <form action="#" class="tel-form">
+          <div>
+            <span class="iconfont icon-shouji"></span>
+            <input type="tel" placeholder="请输入手机号">
+          </div>
+          <div>
+            <span class="iconfont icon-yanzhengma"></span>
+            <input type="text" placeholder="请输入验证码">
+          </div>
+          <div class="btn">登录</div>
+          <div class="check-login">
+            <a href="#"><span class="iconfont icon-weibo-copy "></span>微博登录</a>
+            <a href="#"><span class="iconfont icon-zhifubao"></span>支付宝登录</a>
+          </div>
+          <p>
+            <a href="register.html">免费注册</a>
+          </p>
+        </form>
+        <div class="dask">
+          <div class="ewm">
+            <div class="sao">扫码登录更安全</div>
+          </div>
+          <div class="pc"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+  @@include('./common/footNav.html');
+  <script src="../js/login.js" type="module"></script>
+</body>
+
+</html>
