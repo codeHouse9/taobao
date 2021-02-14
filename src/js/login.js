@@ -36,6 +36,6 @@ $("#pass-login").click(function () {
     }
   } else {
     alert('用户不存在，前往注册...');
-    location.href = 'views/register.html';
+    location.href = 'register.html';
   }
 })

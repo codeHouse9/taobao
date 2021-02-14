@@ -1,0 +1,44 @@
+@import "./base.scss";
+@import "./headNav.scss";
+.detail-head {
+  width: 1140px;
+  margin: 0 auto;
+  height: 70px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  h1 {
+    img {
+      width: 96px;
+      height: 38px;
+    }
+    select {
+      height: 20px;
+      margin-left: 15px;
+      color: #666;
+      width: 72px;
+      font-size: 12px;
+    }
+  }
+  .detail-search {
+    height: 30px;
+    input {
+      float: left;
+      width: 285px;
+      height: 30px;
+      line-height: 30px;
+      border: 2px solid #ff4400;
+      padding: 3px;
+    }
+    button {
+      float: left;
+      width: 72px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      background-color: #f40;
+      color: #fff;
+    }
+  }
+}

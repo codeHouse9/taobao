@@ -43,6 +43,7 @@ task('img', async () => {
 task('html', async () => {
   setTimeout(() => {
     src(['./rev/**/*.json', './src/index.html'])
+      .pipe(load.fileInclude())
       .pipe(load.revCollector({ replaceReved: true }))
       // 执行数据
       .pipe(load.minifyHtml())
@@ -52,6 +53,7 @@ task('html', async () => {
 // 处理views
 task('views', async () => {
   src(['./rev/**/*.json', './src/views/**/*.html'])
+    .pipe(load.fileInclude())
     .pipe(load.revCollector({ replaceReved: true }))
     .pipe(load.minifyHtml())
     .pipe(dest('./dist/views'))
@@ -60,6 +62,11 @@ task('views', async () => {
 task('ico', async () => {
   src('./src/favicon.ico')
     .pipe(dest('./dist'))
+})
+// 移动数据
+task('data', async () => {
+  src('./src/data/**/*.json')
+    .pipe(dest('./dist/data'))
 })
 
 task('build', series('delDist', 'img', 'sass', 'js', 'ico', 'html', 'views'))

@@ -21,7 +21,6 @@ task('concatCss', async () => {
     .pipe(load.sass())
     .pipe(dest('./dist/style'))
     .pipe(load.connect.reload())
-
 })
 
 // 移动js

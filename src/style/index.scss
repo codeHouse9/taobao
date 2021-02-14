@@ -1,6 +1,8 @@
+@import "./swiper-bundle.css";
 @import "./base.scss";
 @import "./headNav.scss";
 @import "./footNav.scss";
+
 $color: #ff4400;
 $ff5000: #ff5000;
 $c3: #3c3c3c;
@@ -73,6 +75,7 @@ body {
         .common {
           display: none;
           position: absolute;
+          z-index: 999;
           left: 0;
           top: 40px;
           width: 556px;
@@ -456,7 +459,7 @@ body {
   }
   .main-right {
     background-color: #fff;
-    height: 100%;
+    height: 510px;
     width: 290px;
     margin-top: 10px;
     .shopping-details {
@@ -645,6 +648,64 @@ body {
             }
           }
         }
+      }
+    }
+  }
+}
+// 有好货
+.goods {
+  height: 358px;
+  background-color: #fff;
+  padding: 20px 0 0 20px;
+  margin-top: 10px;
+  .goods-title {
+    color: #999;
+    line-height: 24px;
+    img {
+      margin-right: 11px;
+      width: 74px;
+      height: 24px;
+    }
+  }
+  .goods-cont {
+    height: 358px - 20;
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+    margin: 20px 10px 0;
+    a {
+      width: 180px;
+      height: 180px;
+      &:hover h5 {
+        color: $color;
+      }
+      // text-align: center;
+      img {
+        display: block;
+        width: 180px;
+        height: 180px;
+        margin: 0 auto;
+      }
+      h5 {
+        margin-top: 5px;
+        line-height: 28px;
+        font-size: 16px;
+        color: $c3;
+        margin-left: 6px;
+      }
+      p {
+        line-height: 24px;
+        color: #999;
+        font-size: 14px;
+        margin-left: 6px;
+      }
+      span {
+        display: block;
+        margin-top: 12px;
+        font-size: 14px;
+        color: #35b1ff;
+        text-align: left;
+        margin-left: 6px;
       }
     }
   }

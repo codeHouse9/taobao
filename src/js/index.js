@@ -154,3 +154,23 @@ $("#home-main .notice a").mouseover(function () {
 $("#home-main .app li").each(function (index, item) {
   $(item).find('.app-ico').css('background-position', '0 ' + index * -44 + 'px');
 })
+//有好货数据渲染
+let goodsStr = '';
+// 数据请求
+$.ajax({
+  url: './data/goods.json',
+  method: 'get',
+  success(data) {
+    for (let i = 0, len = data.length; i < len; i++) {
+      goodsStr += `
+      <a href="./views/profile.html?${"goodsId=" + data[i].goodsId}" target="_blank">
+        <img src="${data[i].img}" alt="">
+        <h5>${data[i].title}</h5>
+        <p>${data[i].desc}</p>
+        <span class="iconfont ${data[i].love.iconfont}">  ${data[i].love.peopleNum + data[i].love.say}</span>
+      </a>
+    `
+    }
+    $(".goods .goods-cont").html(goodsStr);
+  }
+})

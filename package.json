@@ -15,6 +15,7 @@
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
+    "gulp-browserify": "^0.5.1",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.7.0",
     "gulp-file-include": "^2.3.0",
