@@ -12,7 +12,7 @@
 <body>
   @@include('./views/common/headNav.html')
   <!-- login部分 -->
-  <div class="home-head">
+  <div id="home-head" class="home-head">
     <div class="home-logo w">
       <h1>
         <a href="index.html" class="home-logo">淘宝</a>
@@ -43,6 +43,24 @@
           <img src="./img/home/head-ewm.png" alt="">
         </div>
         <div class="iconfont icon-cha"></div>
+      </div>
+    </div>
+  </div>
+  <div class="search-dask" style="display: none;">
+    <div class="search-dask-cont w">
+      <h1>
+        <a href="#"><img src="./img/home/logo.png" alt=""></a>
+      </h1>
+      <div class="home-search home-search-dask">
+        <div class="search-wrap">
+          <input type="text" class="home-search-ipt2">
+          <ul class="common">
+          </ul>
+          <span class="placeholder">粉底液养颜</span>
+          <i class="iconfont icon-sousuo"></i>
+          <i class="iconfont icon-xiangji"></i>
+          <a href="#" class="btn">搜索</a>
+        </div>
       </div>
     </div>
   </div>
@@ -217,19 +235,66 @@
       <li><a href="#">母婴</a> / <a href="#">童装</a> / <a href="#">玩具</a><span class="iconfont icon-right"></span>
         <div class="li-cont">3</div>
       </li>
+      <li><a href="#">母婴</a> / <a href="#">童装</a> / <a href="#">玩具</a><span class="iconfont icon-right"></span>
+        <div class="li-cont">4</div>
+      </li>
+      <li><a href="#">母婴</a> / <a href="#">童装</a> / <a href="#">玩具</a><span class="iconfont icon-right"></span>
+        <div class="li-cont">5</div>
+      </li>
+      <li><a href="#">母婴</a> / <a href="#">童装</a> / <a href="#">玩具</a><span class="iconfont icon-right"></span>
+        <div class="li-cont">6</div>
+      </li>
+      <li><a href="#">母婴</a> / <a href="#">童装</a> / <a href="#">玩具</a><span class="iconfont icon-right"></span>
+        <div class="li-cont">7</div>
+      </li>
+      <li><a href="#">母婴</a> / <a href="#">童装</a> / <a href="#">玩具</a><span class="iconfont icon-right"></span>
+        <div class="li-cont">3</div>
+      </li>
+      <li><a href="#">母婴</a> / <a href="#">童装</a> / <a href="#">玩具</a><span class="iconfont icon-right"></span>
+        <div class="li-cont">3</div>
+      </li>
+      <li><a href="#">母婴</a> / <a href="#">童装</a> / <a href="#">玩具</a><span class="iconfont icon-right"></span>
+        <div class="li-cont">8</div>
+      </li>
+      <li><a href="#">母婴</a> / <a href="#">童装</a> / <a href="#">玩具</a><span class="iconfont icon-right"></span>
+        <div class="li-cont">9</div>
+      </li>
+      <li><a href="#">母婴</a> / <a href="#">童装</a> / <a href="#">玩具</a><span class="iconfont icon-right"></span>
+        <div class="li-cont">10</div>
+      </li>
+      <li><a href="#">母婴</a> / <a href="#">童装</a> / <a href="#">玩具</a><span class="iconfont icon-right"></span>
+        <div class="li-cont">11</div>
+      </li>
+      <li><a href="#">母婴</a> / <a href="#">童装</a> / <a href="#">玩具</a><span class="iconfont icon-right"></span>
+        <div class="li-cont">12</div>
+      </li>
+      <li><a href="#">母婴</a> / <a href="#">童装</a> / <a href="#">玩具</a><span class="iconfont icon-right"></span>
+        <div class="li-cont">13</div>
+      </li>
     </ul>
     <div class="main-middle">
       <div class="top-scroll">
         <div class="swiper-container main-swiper">
           <div class="swiper-wrapper">
-            <a href="#" class="swiper-slide"><img src="./img/home/home-scroll-top (1).jpg" alt=""></a>
-            <a href="#" class="swiper-slide"><img src="./img/home/home-scroll-top (2).jpg" alt=""></a>
-            <a href="#" class="swiper-slide"><img src="./img/home/home-scroll-top (3).jpg" alt=""></a>
-            <a href="#" class="swiper-slide"><img src="./img/home/home-scroll-top (4).jpg" alt=""></a>
-            <a href="#" class="swiper-slide"><img src="./img/home/home-scroll-top (5).jpg" alt=""></a>
+            <a href="#" class="swiper-slide">
+              <img src="./img/home/home-scroll-top(1).jpg" alt="">
+            </a>
+            <a href="#" class="swiper-slide">
+              <img src="./img/home/home-scroll-top(2).jpg" alt="">
+            </a>
+            <a href="#" class="swiper-slide">
+              <img src="./img/home/home-scroll-top(3).jpg" alt="">
+            </a>
+            <a href="#" class="swiper-slide">
+              <img src="./img/home/home-scroll-top(4).jpg" alt="">
+            </a>
+            <a href="#" class="swiper-slide">
+              <img src="./img/home/home-scroll-top(5).jpg" alt="">
+            </a>
           </div>
           <!-- 如果需要分页器 -->
-          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination">
+          </div>
 
           <!-- 如果需要导航按钮 -->
           <div class="swiper-button-prev"></div>
@@ -383,12 +448,272 @@
     </div>
   </main>
   <!-- 有好货 -->
-  <div class="goods w">
+  <div class="goods w" id="goods">
     <div class="goods-title">
       <img src="./img/home/goods-tit.png" alt="">与品质生活不期而遇
     </div>
     <div class="goods-cont">
     </div>
+  </div>
+  <!-- 广告 -->
+  <div class="w ad">
+    <img src="./img/home/ad.jpg" alt="">
+  </div>
+  <!-- 每日好货 -->
+  <div class="daily-good-shop w">
+    <div class="good-shop">
+      <h3>
+        <img src="./img/home/daily-goods_tit.png" alt="">
+        <span>发现深藏的好店</span>
+      </h3>
+      <ul class="good-shop-list">
+        <li>
+          <a href="./views/detail.html">
+            <h4>万能集市</h4>
+            <div class="big-img">
+              <img src="./img/home/daily-goods (2).jpg" alt="">
+            </div>
+            <div class="small-img">
+              <img src="./img/home/daily-goods (2).jpg" alt="">
+              <img src="./img/home/daily-goods (11).jpg" alt="">
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="./views/detail.html">
+            <h4>淘宝江湖</h4>
+            <div class="big-img">
+              <img src="./img/home/daily-goods (8).jpg" alt="">
+            </div>
+            <div class="small-img">
+              <img src="./img/home/daily-goods (7).jpg" alt="">
+              <img src="./img/home/daily-goods (9).jpg" alt="">
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="./views/detail.html">
+            <h4>深藏不露</h4>
+            <div class="big-img">
+              <img src="./img/home/daily-goods (1).jpg" alt="">
+            </div>
+            <div class="small-img">
+              <img src="./img/home/daily-goods (4).jpg" alt="">
+              <img src="./img/home/daily-goods (3).jpg" alt="">
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="./views/detail.html">
+            <h4>高手林立</h4>
+            <div class="big-img">
+              <img src="./img/home/daily-goods (5).jpg" alt="">
+            </div>
+            <div class="small-img">
+              <img src="./img/home/daily-goods (6).jpg" alt="">
+              <img src="./img/home/daily-goods (10).jpg" alt="">
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="good-shop">
+      <h3>
+        <img src="./img/home/taobao-live-tit.png" alt="">
+        <span>发现深藏的好店</span>
+      </h3>
+      <ul class=" good-shop-list">
+        <li>
+          <a href="./views/detail.html">
+            <h4>高端时尚内衣 <span>284观看</span></h4>
+            <div class="big-img">
+              <img src="./img/home/taobao-live (3).jpg" alt="">
+            </div>
+            <div class="small-img">
+              <img src="./img/home/taobao-live (4).jpg" alt="">
+              <img src="./img/home/taobao-live (8).jpg" alt="">
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="./views/detail.html">
+            <h4>alanmcp <span>268观看</span></h4>
+            <div class="big-img">
+              <img src="./img/home/taobao-live(12).jpg" alt="">
+            </div>
+            <div class="small-img">
+              <img src="./img/home/taobao-live (7).jpg" alt="">
+              <img src="./img/home/taobao-live (11).jpg" alt="">
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="./views/detail.html">
+            <h4>娟子时尚屋_2 <span>1546观看</span></h4>
+            <div class="big-img">
+              <img src="./img/home/taobao-live (6).jpg" alt="">
+            </div>
+            <div class="small-img">
+              <img src="./img/home/taobao-live (2).jpg" alt="">
+              <img src="./img/home/taobao-live(12).jpg" alt="">
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="./views/detail.html">
+            <h4>kongbo5 <span>394观看</span></h4>
+            <div class="big-img">
+              <img src="./img/home/taobao-live (5).jpg" alt="">
+            </div>
+            <div class="small-img">
+              <img src="./img/home/taobao-live (9).jpg" alt="">
+              <img src="./img/home/taobao-live (10).jpg" alt="">
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <!-- 特色好货 -->
+  <div id="featured-goods" class="featured-goods w">
+    <div class="featured-goods-cont">
+      <h3><em>特色好货</em></h3>
+      <div class="featured-list">
+        <a href="./views/detail.html" class="featured-item">
+          <h4>拍卖</h4>
+          <p>1元起拍捡漏</p>
+          <img src="./img/home/featured-goods (1).jpg" alt="">
+        </a>
+        <a href="./views/detail.html" class="featured-item">
+          <h4>淘小铺</h4>
+          <p>每月多赚1000元</p>
+          <img src="./img/home/featured-goods (3).jpg" alt="">
+        </a>
+        <a href="./views/detail.html" class="featured-item">
+          <h4>造点新货</h4>
+          <p>全球创意众筹平台</p>
+          <img src="./img/home/featured-goods (1).png" alt="">
+        </a>
+        <a href="./views/detail.html" class="featured-item">
+          <h4>淘宝心选</h4>
+          <p>美好而有用</p>
+          <img src="./img/home/featured-goods (2).png" alt="">
+        </a>
+      </div>
+    </div>
+    <div class="girf">
+      <a href="./views/detail.html">
+        <img src="./img/home/featured-goods (2).jpg" alt="">
+      </a>
+    </div>
+  </div>
+  <!-- 热卖单品 -->
+  <div id="popular" class="popular w">
+    <h3>热卖单品</h3>
+    <div class="popular-wrap">
+      <div class="popular-link">
+        <a href="./views/profile2.html">zara</a>
+        <a href="./views/profile2.html">安踏</a>
+        <a href="./views/profile2.html">床垫</a>
+        <a href="./views/profile2.html">男鞋</a>
+        <a href="./views/profile2.html">电视</a>
+        <a href="./views/profile2.html">行李箱</a>
+        <a href="./views/profile2.html">牙膏</a>
+        <a href="./views/profile2.html">女手表</a>
+        <a href="./views/profile2.html">冰箱</a>
+        <a href="./views/profile2.html">手链</a>
+        <a href="./views/profile2.html">zara</a>
+        <a href="./views/profile2.html">安踏</a>
+        <a href="./views/profile2.html">床垫</a>
+        <a href="./views/profile2.html">男鞋</a>
+        <a href="./views/profile2.html">电视</a>
+        <a href="./views/profile2.html">行李箱</a>
+        <a href="./views/profile2.html">牙膏</a>
+        <a href="./views/profile2.html">女手表</a>
+        <a href="./views/profile2.html">冰箱</a>
+        <a href="./views/profile2.html">手链</a>
+        <a href="./views/profile2.html">zara</a>
+        <a href="./views/profile2.html">安踏</a>
+        <a href="./views/profile2.html">床垫</a>
+        <a href="./views/profile2.html">男鞋</a>
+      </div>
+      <img src="./img/home/popular-ad.png" alt="" class="popular-ad">
+    </div>
+    <ul class="popular-cont">
+    </ul>
+  </div>
+  <!-- 猜你喜欢广告 -->
+  <div class="may-like-ad w">
+    <a href="./views/detail.html">
+      <img src="./img/home/may-like1.png" alt="">
+    </a>
+    <a href="./views/detail.html">
+      <img src="./img/home/may-like2.png" alt="">
+    </a>
+    <a href="./views/detail.html">
+      <img src="./img/home/may-like3.png" alt="">
+    </a>
+  </div>
+  <!-- 猜你喜欢 -->
+  <div id="may-like" class="may-like w">
+    <h3>猜你喜欢</h3>
+    <ul class="may-like-cont">
+    </ul>
+  </div>
+  <!-- end -->
+  <div class="end">END</div>
+  <!-- help-us -->
+  <div class="help-us w">
+    <div class="help-item">
+      <h4 class="iconfont icon-security"><span>消费者保障</span></h4>
+      <div class="help-link">
+        <a href="#">保障范围</a>
+        <a href="#">退货退款流程</a>
+        <a href="#">服务中心</a>
+        <a href="#">更多特色服务</a>
+      </div>
+    </div>
+    <div class="help-item">
+      <h4 class="iconfont icon-xinshoubangzhu"><span>新手上路</span></h4>
+      <div class="help-link">
+        <a href="#">新手专区</a>
+        <a href="#">消费警示</a>
+        <a href="#">交易安全</a>
+        <a href="#">24小时在线帮助</a>
+        <a href="#">免费开店</a>
+      </div>
+    </div>
+    <div class="help-item">
+      <h4 class="iconfont icon-icon-payment"><span>付款方式</span></h4>
+      <div class="help-link">
+        <a href="#">快捷支付</a>
+        <a href="#">信用卡</a>
+        <a href="#">余额宝</a>
+        <a href="#">蚂蚁花呗</a>
+        <a href="#">货到付款</a>
+      </div>
+    </div>
+    <div class="help-item">
+      <h4 class="iconfont icon-taobaotese"><span>淘宝特色</span></h4>
+      <div class="help-link">
+        <a href="#">手机淘宝</a>
+        <a href="#">旺旺/旺信</a>
+        <a href="#">大众评审</a>
+      </div>
+    </div>
+  </div>
+  <!-- 侧边类似描点链接 -->
+  <div class="miaodian">
+    <span class="miaodian-logo"></span>
+    <a href="#goods">品质好货</a>
+    <a href="#featured-goods">好店直播</a>
+    <a href="#popular">实惠热卖</a>
+    <a href="#may-like">猜你喜欢</a>
+    <a href="#"><i class="iconfont icon-top"></i> 顶部</a>
+    <a href="#">反馈</a>
+    <a href="#">暴恐举报</a>
+
   </div>
   @@include('./views/common/footNav.html')
 

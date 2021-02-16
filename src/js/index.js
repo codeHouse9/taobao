@@ -1,37 +1,33 @@
 import './headNav.js';
 // login部分
 // 搜索框输入时
-$(".home-search-ipt")[0].oninput = function () {
-
-  if (!$(".home-search-ipt").val().trim()) {
-    $(".placeholder").css("display", "block");
-    $(".icon-sousuo").css("display", "block");
-    $(".home-logo .common").empty().css("display", "none");
+function reqData(dom, val) {
+  if (!val) {
+    $(dom).find('.placeholder').css("display", "block");
+    $(dom).find('.icon-sousuo').css("display", "block");
+    $(dom).find('.common').empty().css("display", "none");
     return
   }
-  $(".placeholder").css("display", "none");
-  $(".icon-sousuo").css("display", "none");
-  $(".home-logo .common").css('display', 'block');
-
-  $(".common").append();
+  $(dom).find('.placeholder').css("display", "none");
+  $(dom).find('.icon-sousuo').css("display", "none");
+  $(dom).find('.common').css('display', 'block');
   jsonp({
     url: 'http://suggestion.baidu.com/su',
     jsonp: 'cb',
     jsonpCallback: 'hh',
     data: {
-      wd: $(this).val(),
+      wd: val
     },
     success(data) {
       let str = '';
-      $(".home-logo .common").empty();
+      $(dom).find('.common').empty();
       data.s.forEach(val => {
         str += `<a href="#" > ${val}</a>`
       })
-      $(".home-logo .common").append(str);
+      $(dom).find('.common').append(str);
 
     }
   })
-
 }
 //封装jsonp请求数据
 // url地址:http://suggestion.baidu.com/su
@@ -59,9 +55,29 @@ function jsonp(options) {
   }
 
 }
+// 防抖
+function debounce(cb, delay = 300, dom = undefined, val = undefined) {
+  let timer = null;
+  return function () {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      cb(dom, val);
+    }, delay);
+  }
+}
+
+$(".home-search-ipt")[0].oninput = function () {
+  var db1 = debounce(reqData, 500, '.home-logo', $('.home-search-ipt').val().trim());
+  db1();
+}
+
+$(".home-search-ipt2")[0].oninput = function () {
+  var db2 = debounce(reqData, 300, '.home-search-dask', $('.home-search-ipt2').val().trim());
+  db2();
+}
+
 
 // 切换天猫选项
-console.log($(".home-search>span"));
 $(".home-search span").click(function () {
   console.log($(this));
   $(this).addClass("active").siblings('span').removeClass('active');
@@ -174,3 +190,128 @@ $.ajax({
     $(".goods .goods-cont").html(goodsStr);
   }
 })
+// 懒加载图片
+function loadImage(dom, data) {
+  var img = [], imgData = [],
+    showImage = new Image();
+  for (let i = 0; i < data.length; i++) {
+    imgData.push(data[i].img);
+  }
+  imgData = imgData.concat(imgData);
+  var imgLen = imgData.length;
+  showImage.src = './img/home/reload.gif';
+  $(dom).append(showImage);
+  for (let i = 0; i < imgLen; i++) {
+    img[i] = new Image()
+    img[i].src = imgData[i]
+    $(img[i]).on('load', function () {
+      setTimeout(() => {
+        $(dom).eq(i).empty();
+        $(dom).eq(i).append(img[i]);
+      }, 2000);
+    })
+  }
+}
+// 渲染热卖单品数据
+$.ajax({
+  url: '../data/popular.json',
+  method: 'get',
+  success(data) {
+    let popularStr = '';
+    for (let i = 0, len = data.length; i < len; i++) {
+      popularStr += `
+        <li>
+          <a href="./views/detail.html?poId=${data[i].poId}">
+            <div class="imgs"></div>
+            <p class="popular-desc"><img src="${data[i].descImg}" alt="" style="display: ${data[i].descImg ? "inline-block" : "none"}">${data[i].desc}</p>
+            <p class="popular-liked">
+              评价<span>${data[i].evaluation}</span> 收藏 <em>${data[i].favorites}</em>
+            </p>
+            <p class="popular-price">
+              <i>￥</i><em>${data[i].newPrice}</em>
+              <span style="display:${data[i].oldPrice ? "inline-block" : "none"}">￥${data[i].oldPrice}</span>
+              <strong>月销${data[i].sell}笔</strong>
+            </p>
+          </a>
+        </li>
+      `;
+    }
+    popularStr += popularStr;
+    $(".popular-cont").html(popularStr);
+    $(".popular-cont").ready(function () {
+      loadImage('.popular-cont li a .imgs', data);
+      // lazy('.popular-cont li a .imgs', data);
+    })
+  }
+})
+
+// 渲染猜你喜欢数据
+$.ajax({
+  url: '../data/mayLike.json',
+  method: 'get',
+  success(data) {
+    let mayLikeStr = '';
+    for (let i = 0, len = data.length; i < len; i++) {
+      mayLikeStr += `
+        <li>
+          <a href="./views/detail.html?lId=${data[i].lId}">
+            <img src="${data[i].img}" alt="">
+            <h4><img src="./img/home/may-like-bdy.png" style="display:${data[i].titleImg ? 'inline-block' : 'none'}" alt=""> ${data[i].title}
+            </h4>
+            <p>
+              <i>￥</i><span class="price">${data[i].price}</span>
+              <strong>销量:${data[i].sell}</strong>
+            </p>
+            <div class="dask"></div>
+          </a>
+        </li>
+      `;
+      mayLikeStr += mayLikeStr;
+    }
+    $(".may-like-cont").html(mayLikeStr);
+  }
+})
+// 滚动窗口显示搜索框
+let throttlingFn = throttling(scrollWindow, 200, window);
+window.onscroll = function () {
+  throttlingFn();
+}
+
+// 节流
+function throttling(cb, delay = 300, dom) {
+  let timer = null, lastTimer = null;
+  return function () {
+    let nowTimer = Date.now();
+    if (lastTimer && nowTimer < lastTimer + delay) {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        lastTimer = Date.now();
+        cb(dom);
+      }, delay);
+    } else {
+      lastTimer = nowTimer;
+      cb(dom);
+    }
+  }
+
+}
+// 节流滚动窗口
+function scrollWindow(dom) {
+  if (dom.scrollY >= 160) {
+    $('.search-dask').css('display', 'block');
+  } else {
+    $('.search-dask').css('display', 'none');
+  }
+  //滚动定位侧边栏
+  if (-dom.scrollY >= -400) {
+    $(".miaodian").css({
+      position: 'absolute',
+      top: 440 + 'px'
+    });
+  } else {
+    $(".miaodian").css({
+      position: 'fixed',
+      top: '36px'
+    });
+  }
+}

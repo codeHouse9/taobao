@@ -1,0 +1,54 @@
+[
+  {
+    "poId": 0,
+    "img": "./img/home/popular (5).jpg",
+    "desc": "秋冬流感多发,防护口罩备起来",
+    "evaluation": 3199,
+    "favorites": 4510,
+    "newPrice": 25.9,
+    "oldPrice": 599,
+    "sell": 773
+  },
+  {
+    "poId": 1,
+    "img": "./img/home/popular (6).jpg",
+    "descImg":"./img/home/popular-by.png",
+    "desc": "卖爆了!薇娅推荐colorkey小金管哑光唇釉",
+    "evaluation": 114671,
+    "favorites": 234728,
+    "newPrice": 69,
+    "oldPrice": 130,
+    "sell": 88038
+  },
+  {
+    "poId": 2,
+    "img": "./img/home/popular (8).jpg",
+    "descImg":"./img/home/popular-by.png",
+    "desc": "送爸妈按摩椅,令血液循环通畅",
+    "evaluation": 2098,
+    "favorites": 6462,
+    "newPrice": 3380,
+    "oldPrice": 13380,
+    "sell": 2080
+  },
+  {
+    "poId": 3,
+    "img": "./img/home/popular (7).jpg",
+    "descImg":"./img/home/popular-by.png",
+    "desc": "一抹变帅,一支神奇的男士素颜霜!",
+    "evaluation": 16737,
+    "favorites": 419360,
+    "newPrice": 79.9,
+    "oldPrice": 199,
+    "sell": 19894
+  },
+  {
+    "poId": 4,
+    "img": "./img/home/popular (1).jpg",
+    "desc": "官方帮宝适一级帮拉拉裤XL64婴儿透气尿不湿",
+    "evaluation": 7084,
+    "favorites": 43484,
+    "newPrice": 292,
+    "sell": 7960
+  }
+]
