@@ -1,6 +1,6 @@
 [
   {
-    "poId": 0,
+    "pid": 30,
     "img": "./img/home/popular (5).jpg",
     "desc": "秋冬流感多发,防护口罩备起来",
     "evaluation": 3199,
@@ -10,7 +10,7 @@
     "sell": 773
   },
   {
-    "poId": 1,
+    "pid": 31,
     "img": "./img/home/popular (6).jpg",
     "descImg":"./img/home/popular-by.png",
     "desc": "卖爆了!薇娅推荐colorkey小金管哑光唇釉",
@@ -21,7 +21,7 @@
     "sell": 88038
   },
   {
-    "poId": 2,
+    "pid": 32,
     "img": "./img/home/popular (8).jpg",
     "descImg":"./img/home/popular-by.png",
     "desc": "送爸妈按摩椅,令血液循环通畅",
@@ -32,7 +32,7 @@
     "sell": 2080
   },
   {
-    "poId": 3,
+    "pid": 33,
     "img": "./img/home/popular (7).jpg",
     "descImg":"./img/home/popular-by.png",
     "desc": "一抹变帅,一支神奇的男士素颜霜!",
@@ -43,7 +43,7 @@
     "sell": 19894
   },
   {
-    "poId": 4,
+    "pid": 34,
     "img": "./img/home/popular (1).jpg",
     "desc": "官方帮宝适一级帮拉拉裤XL64婴儿透气尿不湿",
     "evaluation": 7084,

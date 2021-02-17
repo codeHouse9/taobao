@@ -11,7 +11,7 @@
 
 <body>
   @@include('./common/headNav.html');
-  <div class="detail">
+  <div class="detail dw">
     <div class="detail-head">
       <h1>
         <a href="../index.html">
@@ -23,11 +23,150 @@
       </h1>
       <div class="detail-search">
         <input type="text">
-        <button>搜淘宝</button>
+        <a href="#">搜淘宝</a>
         <span>搜本店</span>
       </div>
     </div>
   </div>
+  <div class="detail-main dw">
+    <!-- 头部列表 -->
+    <div class="main-head">
+      <div class="imgs"></div>
+      <ul class="head-list">
+        <li class="all-baby">
+          <div class="baby">
+            <a href="#">按销量</a>
+            <a href="#">按新品</a>
+            <a href="#">按价格</a>
+          </div>
+          <a href="#">所有分类<span class="iconfont icon-xiajiantou"></span>
+          </a>
+          <div class="all-cate">
+            <a href="#" class="first-as">所有宝贝
+            </a>
+            <a href="#">羊绒围巾</a>
+            <a href="#">羊绒帽子</a>
+            <a href="#">羊绒/手套/袜/鞋</a>
+            <a href="#">羊绒衫</a>
+            <a href="#">新品上市</a>
+            <a href="#">材质</a>
+            <a href="#">包装</a>
+            <a href="#">特惠清仓区</a>
+          </div>
+        </li>
+        <li>
+          <a href="#"> 首页</a>
+        </li>
+        <li>
+          <a href="#"> 羊绒围巾</a>
+        </li>
+        <li>
+          <a href="#">羊绒帽子</a>
+        </li>
+        <li>
+          <a href="#">羊绒/手套/袜/鞋</a>
+        </li>
+        <li>
+          <a href="#">材质 <span class="iconfont icon-xiajiantou"></span></a>
+        </li>
+        <li>
+          <a href="#">新品上市</a>
+        </li>
+      </ul>
+    </div>
+    <!-- 放大镜部分 -->
+    <div class="lg-wrap dw">
+      <div class="lg-imgs">
+        <div class="imgs">
+          <img src="../img/detail/主图-01.jpg" alt="">
+          <span class="iconfont icon-sousuo"></span>
+          <div class="show-lg-img">
+
+          </div>
+        </div>
+        <ul class="lg-list">
+          <li>
+            <img src="../img/detail/主图-01.jpg" alt="">
+          </li>
+          <li>
+            <img src="../img/detail/主图-02.jpg" alt="">
+          </li>
+          <li>
+            <img src="../img/detail/主图-03.jpg" alt="">
+          </li>
+          <li>
+            <img src="../img/detail/主图-04.jpg" alt="">
+          </li>
+          <li>
+            <img src="../img/detail/主图-05.jpg" alt="">
+          </li>
+        </ul>
+        <div class="collect">
+          <span class="ico"></span>
+          <span>收藏宝贝 (<i>17937</i> 人气)</span>
+        </div>
+      </div>
+      <div class="lg-infos">
+        <h5 class="title">Pure cashmere 英单客供 羊绒帽子女双色双层边男潮秋冬季保暖针织</h5>
+        <div class="samll"><img src="../img/detail/store0.png" alt=""> 海量新品 潮流穿搭 玩趣互动</div>
+        <ul class="price-wrap">
+          <li>
+            价格 <strong>
+              <i>￥</i>
+              <i>398.00</i>
+            </strong>
+            <div class="total-info">
+              <p>
+                <span>1018</span>
+                累计评论
+              </p>
+              <p>
+                <span>38</span>
+                交易成功
+              </p>
+            </div>
+          </li>
+          <li>
+            淘宝价
+            <span>￥198.00</span>
+            <i>专属优惠</i>
+          </li>
+          <li>
+            <span>优惠</span>
+            <div class="right">
+              <p><img src="../img/detail/youhui.png" alt=""> 100元店铺优惠券，满1568元可用 <a href="#">领取</a></p>
+              <p><img src="../img/detail/youhui.png" alt=""> 70元店铺优惠券，满1168元可用 <a href="#">领取</a></p>
+              <p><img src="../img/detail/active.png" alt="">每满200减15</p>
+            </div>
+          </li>
+        </ul>
+        <div class="delivery">
+          <p><span>配送</span>
+            <strong>内蒙古呼和浩特 </strong> 至 <i> 广东深圳宝安区 </i><em>快递 免运费 </em>
+          </p>
+          <div class="size">
+            <span>尺寸</span>
+            <a href="#">可调节</a>
+
+          </div>
+          <div class="color">
+            <span>颜色选择</span>
+            <ul>
+              <li>红色</li>
+              <li>蓝色</li>
+              <li>白色</li>
+              <li>黑色</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="lg-store">
+
+      </div>
+
+    </div>
+  </div>
+  @@include('./common/footNav.html');
   <script src="../js/detail.js" type="module"></script>
 </body>
 

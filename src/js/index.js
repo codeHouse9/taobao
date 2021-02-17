@@ -180,7 +180,7 @@ $.ajax({
     for (let i = 0, len = data.length; i < len; i++) {
       goodsStr += `
       <a href="./views/profile.html?${"goodsId=" + data[i].goodsId}" target="_blank">
-        <img src="${data[i].img}" alt="">
+        <img src="${data[i].img2}" alt="">
         <h5>${data[i].title}</h5>
         <p>${data[i].desc}</p>
         <span class="iconfont ${data[i].love.iconfont}">  ${data[i].love.peopleNum + data[i].love.say}</span>
@@ -214,14 +214,14 @@ function loadImage(dom, data) {
 }
 // 渲染热卖单品数据
 $.ajax({
-  url: '../data/popular.json',
+  url: './data/popular.json',
   method: 'get',
   success(data) {
     let popularStr = '';
     for (let i = 0, len = data.length; i < len; i++) {
       popularStr += `
         <li>
-          <a href="./views/detail.html?poId=${data[i].poId}">
+          <a href="./views/detail.html?pid=${data[i].pid}">
             <div class="imgs"></div>
             <p class="popular-desc"><img src="${data[i].descImg}" alt="" style="display: ${data[i].descImg ? "inline-block" : "none"}">${data[i].desc}</p>
             <p class="popular-liked">
@@ -240,21 +240,34 @@ $.ajax({
     $(".popular-cont").html(popularStr);
     $(".popular-cont").ready(function () {
       loadImage('.popular-cont li a .imgs', data);
-      // lazy('.popular-cont li a .imgs', data);
     })
   }
 })
-
+// 渲染热卖单品列表数据
+$.ajax({
+  url: './data/profile2.json',
+  method: 'get',
+  success(data) {
+    console.log(data);
+    let str = '';
+    for (let i = 0; i < data.list.length; i++) {
+      str += `
+       <a href="./views/profile2.html?id=${i}" target="blanck">${data.list[i]}</a>
+      `;
+    }
+    $('.popular-link').html(str);
+  }
+})
 // 渲染猜你喜欢数据
 $.ajax({
-  url: '../data/mayLike.json',
+  url: './data/mayLike.json',
   method: 'get',
   success(data) {
     let mayLikeStr = '';
     for (let i = 0, len = data.length; i < len; i++) {
       mayLikeStr += `
         <li>
-          <a href="./views/detail.html?lId=${data[i].lId}">
+          <a href="./views/detail.html?pid=${data[i].pid}">
             <img src="${data[i].img}" alt="">
             <h4><img src="./img/home/may-like-bdy.png" style="display:${data[i].titleImg ? 'inline-block' : 'none'}" alt=""> ${data[i].title}
             </h4>
@@ -275,6 +288,7 @@ $.ajax({
 let throttlingFn = throttling(scrollWindow, 200, window);
 window.onscroll = function () {
   throttlingFn();
+
 }
 
 // 节流
@@ -314,4 +328,36 @@ function scrollWindow(dom) {
       top: '36px'
     });
   }
+  // 显示或隐藏返回顶部
+  if (-dom.scrollY >= -670) {
+    $('a.to-top').css('display', 'none');
+  } else {
+    $('a.to-top').css('display', 'block');
+  }
 }
+//锚点处理
+$(".miaodian").on('click', 'a', function (e) {
+  let target = $(e.target).attr('idx');
+  let top = 0;
+  switch (target) {
+    case '#goods':
+      top = $(target).offset().top - 54;
+      window.scrollTo(0, top);
+      break;
+    case '#featured-goods':
+      top = $(target).offset().top - 54;
+      window.scrollTo(0, top);
+      break;
+    case '#popular':
+      top = $(target).offset().top - 54;
+      window.scrollTo(0, top);
+      break;
+    case '#may-like':
+      top = $(target).offset().top - 54;
+      window.scrollTo(0, top);
+      break;
+    default:
+      break;
+  }
+
+})

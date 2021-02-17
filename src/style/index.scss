@@ -8,12 +8,12 @@ $ff5000: #ff5000;
 $c3: #3c3c3c;
 $dd: #dddddd;
 $bg: -webkit-linear-gradient(left, #ff9000 0, #ff5000 100%);
-// login部分
 body,
 html {
   background-color: #f4f4f4;
   scroll-behavior: smooth;
 }
+// login部分
 .loaded-img {
   width: 34px;
   height: 34px;
@@ -65,7 +65,7 @@ html {
     .common {
       display: none;
       position: absolute;
-      z-index: 999;
+      z-index: 9999;
       left: 0;
       top: 40px;
       width: 556px;
