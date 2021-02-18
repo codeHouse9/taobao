@@ -16,7 +16,7 @@
     "price": "198.00",
     "plike": [
       {
-      "pId": 1,
+      "pId": 0,
       "img":"../img/profile/profile-like(4).jpg",
       "title": "Pure Cashmere 针织毛线帽",
       "desc": "精致的针织毛线帽，简约的净色减少搭配烦恼，还有可拆卸毛球的设计，让帽",
@@ -24,7 +24,7 @@
       "say": "0人说好"
       },
       {
-        "pId": 2,
+        "pId": 0,
         "img":"../img/profile/profile-like(1).jpg",
         "title": "Pure cashmere针织帽子围脖",
         "desc": "很有型很有范儿的一款多功能羊绒帽子，看似外观简约，细看却隐藏了许多",
@@ -32,7 +32,7 @@
         "say": "0人说好"
       },
       {
-        "pId": 3,
+        "pId": 0,
         "img":"../img/profile/profile-like(3).jpg",
         "title": "全绒时代 纯色logo渔夫帽",
         "desc": "纯色设计简约不简单，尽显阳光活泼的气息，俏皮减龄，文艺满满。帽身的弹",
@@ -40,7 +40,7 @@
         "say": "0人说好"
       },
       {
-        "pId": 4,
+        "pId": 0,
         "img":"../img/profile/profile-like(2).jpg",
         "title": "全绒时代 秋冬百搭贝雷帽子蝴蝶结",
         "desc": "的，采用了天然的天然的皮毛，天然的纹理，细腻的纹理，让你的手腕更加的",
@@ -51,7 +51,7 @@
   },
   {
     "goodsId": 2,
-    "pId": 5,
+    "pId": 0,
     "img": "../img/home/goods(1).jpg",
     "img2": "./img/home/goods(1).jpg",
     "title": "二胎家庭都在用这种床",
@@ -66,7 +66,7 @@
     "price": "7800.00",
     "plike": [
       {
-        "pId": 6,
+        "pId": 0,
       "img":"../img/profile/profile-like(5).jpg",
       "title": "床和书桌的完美切换",
       "desc": "多功能书桌床挺好的，储物空间也大，安装不错 尺寸正好 材料也挺结实，安装",
@@ -74,7 +74,7 @@
       "say": "0人说好"
       },
       {
-        "pId": 7,
+        "pId": 0,
         "img":"../img/profile/profile-like(6).jpg",
         "title": "龙兆诚 儿童床多功能衣柜一体床",
         "desc": "集衣柜、书桌、置物架于一体的儿童高低床，大大节省了空间。",
@@ -82,7 +82,7 @@
         "say": "0人说好"
       },
       {
-        "pId": 8,
+        "pId": 0,
         "img":"../img/profile/profile-like(8).jpg",
         "title": "aoerpu 实木儿童床",
         "desc": "美式乡村风，为房间增添几分自然的质感，健康环保的进口木质原料，防潮防",
@@ -90,7 +90,7 @@
         "say": "0人说好"
       },
       {
-        "pId": 9,
+        "pId": 0,
         "img":"../img/profile/profile-like(7).jpg",
         "title": "永鸿居 带滑梯卡通跑车儿童床",
         "desc": "优质皮艺接触面，纹理清晰透气性好。",
@@ -101,7 +101,7 @@
   },
   {
     "goodsId": 3,
-    "pId": 10,
+    "pId": 0,
     "img": "../img/home/goods(4).jpg",
     "img2": "./img/home/goods(4).jpg",
     "title": "周大福古法黄金70克实",
@@ -116,7 +116,7 @@
     "price": "38000.00",
     "plike": [
       {
-        "pId": 11,
+        "pId": 0,
       "img":"../img/profile/profile-like(11).jpg",
       "title": "周生生 简约黄金手镯",
       "desc": "周生生的这款金镯子款式比较简约，又不失大方，因为简约所以比较经典，而 尺寸正好 材料也挺结实，安装",
@@ -124,7 +124,7 @@
       "say": "0人说好"
       },
       {
-        "pId": 12,
+        "pId": 0,
         "img":"../img/profile/profile-like(12).jpg",
         "title": "周大生 三生三世足金光圈指环",
         "desc": "中式的名媛风，个性的三层重叠指环造型，显得慵懒而又前卫。表面自带的黄",
@@ -132,7 +132,7 @@
         "say": "0人说好"
       },
       {
-        "pId": 13,
+        "pId": 0,
         "img":"../img/profile/profile-like(10).jpg",
         "title": "足金转运珠情侣吊坠手链",
         "desc": "孤独的手腕等着被呵护的关爱，选择一条适合自己气质的手链来对自己表示关",
@@ -140,7 +140,7 @@
         "say": "0人说好"
       },
       {
-        "pId": 14,
+        "pId": 0,
         "img":"../img/profile/profile-like(9).jpg",
         "title": "潮宏基 三生三世黄金手镯",
         "desc": "采用足金制作亲肤细腻不过敏，磨砂工艺打造手感舒适有质感，流畅的线条，",
@@ -151,7 +151,7 @@
   },
   {
     "goodsId": 4,
-    "pId": 15,
+    "pId": 0,
     "img": "../img/home/goods(3).jpg",
     "img2": "./img/home/goods(3).jpg",
     "title": "低卡减肥又好吃味之素",
@@ -166,7 +166,7 @@
     "price": "28.8",
     "plike": [
       {
-        "pId": 16,
+        "pId": 0,
       "img":"../img/profile/profile-like(14).png",
       "title": "味之素 进口日式豆乳炖浓汤宝",
       "desc": "日本进口，煮熟后，汤汁浓郁，口感爽滑，味道鲜美，是煮火锅的好选择。”",
@@ -174,7 +174,7 @@
       "say": "0人说好"
       },
       {
-        "pId": 17,
+        "pId": 0,
         "img":"../img/profile/profile-like(15).png",
         "title": "桥头 小粒火锅底料",
         "desc": "牛油火锅的原油采用的是纯正菜籽油，更能吸收青花椒的鲜麻味，吃起来更觉",
@@ -182,7 +182,7 @@
         "say": "0人说好"
       },
       {
-        "pId": 18,
+        "pId": 0,
         "img":"../img/profile/profile-like(16).png",
         "title": "味好美 寿喜锅调味汁",
         "desc": "口感咸香适口，充满着浓郁的香气。它富含优质蛋白质，烹饪时不仅能增加菜",
@@ -190,7 +190,7 @@
         "say": "0人说好"
       },
       {
-        "pId": 19,
+        "pId": 0,
         "img":"../img/profile/profile-like(13).png",
         "title": "好人家 青花椒鱼调料",
         "desc": "好人家调料包套装精选四川当地原材料精心打造多种口味的配料，使得做出的",
@@ -201,7 +201,7 @@
   },
   {
     "goodsId": 5,
-    "pId": 20,
+    "pId": 0,
     "img": "../img/home/goods(6).jpg",
     "img2": "./img/home/goods(6).jpg",
     "title": "自装推拉式纱窗",
@@ -216,7 +216,7 @@
     "price": "99.00",
     "plike": [
       {
-        "pId": 21,
+        "pId": 0,
       "img":"../img/profile/profile-like(20).jpg",
       "title": "泰然不锈钢定制沙窗",
       "desc": "不锈钢丝编制而成，坚固耐用。",
@@ -224,7 +224,7 @@
       "say": "0人说好"
       },
       {
-        "pId": 22,
+        "pId": 0,
         "img":"../img/profile/profile-like(19).jpg",
         "title": "内开窗防蚊纱窗定制",
         "desc": "简雅的外观设计，不需要打孔就能安装。",
@@ -232,7 +232,7 @@
         "say": "0人说好"
       },
       {
-        "pId": 23,
+        "pId": 0,
         "img":"../img/profile/profile-like(17).jpg",
         "title": "恒跃达 防盗隐形纱窗",
         "desc": "经典又高级的款式，加入纱窗的形式，能够很好地抵挡蚊虫的飞进，耐用的材",
@@ -240,7 +240,7 @@
         "say": "0人说好"
       },
       {
-        "pId": 24,
+        "pId": 0,
         "img":"../img/profile/profile-like(18).jpg",
         "title": "安德优 回卷式隐形纱窗",
         "desc": "“无碱玻纤网面，耐火抗变形。”",
@@ -251,7 +251,7 @@
   },
   {
     "goodsId": 6,
-    "pId": 25,
+    "pId": 0,
     "img": "../img/home/goods(5).jpg",
     "img2": "./img/home/goods(5).jpg",
     "title": "卡通儿童床带护栏",
@@ -266,7 +266,7 @@
     "price": "1468.56",
     "plike": [
       {
-        "pId": 26,
+        "pId": 0,
       "img":"../img/profile/profile-like(22).jpg",
       "title": "永鸿居 带滑梯卡通跑车儿童床",
       "desc": "优质皮艺接触面，纹理清晰透气性好。",
@@ -274,7 +274,7 @@
       "say": "0人说好"
       },
       {
-        "pId": 27,
+        "pId": 0,
         "img":"../img/profile/profile-like(21).jpg",
         "title": "考拉木屋 实木儿童床拼接大床",
         "desc": "考拉木屋 实木儿童床拼接大床儿童家具拼颜值时代，我们选择拼品质一点也不能假，当低价一度风靡电商我",
@@ -282,7 +282,7 @@
         "say": "0人说好"
       },
       {
-        "pId": 28,
+        "pId": 0,
         "img":"../img/profile/profile-like(23).jpg",
         "title": "七叶木梦中城堡公主中高半高床",
         "desc": "这是一款公主的梦中城堡多功能组合半高床。专为小户型设计的，儿童房在不",
@@ -290,7 +290,7 @@
         "say": "0人说好"
       },
       {
-        "pId": 29,
+        "pId": 0,
         "img":"../img/profile/profile-like(21).png",
         "title": "全实木儿童床带护栏",
         "desc": "一款值得你买的床，价格合适，全实木材质，结实耐用，稳固性好，适合不同",

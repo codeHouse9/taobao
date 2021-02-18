@@ -32,16 +32,16 @@
     <!-- 头部列表 -->
     <div class="main-head">
       <div class="imgs"></div>
-      <ul class="head-list">
-        <li class="all-baby">
-          <div class="baby">
+      <ul class="head-list data-list">
+        <li>
+          <!-- <div class="baby">
             <a href="#">按销量</a>
             <a href="#">按新品</a>
             <a href="#">按价格</a>
-          </div>
+          </div> -->
           <a href="#">所有分类<span class="iconfont icon-xiajiantou"></span>
           </a>
-          <div class="all-cate">
+          <!-- <div class="all-cate">
             <a href="#" class="first-as">所有宝贝
             </a>
             <a href="#">羊绒围巾</a>
@@ -52,7 +52,7 @@
             <a href="#">材质</a>
             <a href="#">包装</a>
             <a href="#">特惠清仓区</a>
-          </div>
+          </div> -->
         </li>
         <li>
           <a href="#"> 首页</a>
@@ -78,57 +78,42 @@
     <div class="lg-wrap dw">
       <div class="lg-imgs">
         <div class="imgs">
-          <img src="../img/detail/主图-01.jpg" alt="">
+          <img src="" alt="" class="data-lgImgs">
           <span class="iconfont icon-sousuo"></span>
           <div class="show-lg-img">
-
           </div>
         </div>
-        <ul class="lg-list">
-          <li>
-            <img src="../img/detail/主图-01.jpg" alt="">
-          </li>
-          <li>
-            <img src="../img/detail/主图-02.jpg" alt="">
-          </li>
-          <li>
-            <img src="../img/detail/主图-03.jpg" alt="">
-          </li>
-          <li>
-            <img src="../img/detail/主图-04.jpg" alt="">
-          </li>
-          <li>
-            <img src="../img/detail/主图-05.jpg" alt="">
-          </li>
+        <ul class="lg-list data-lg-list">
         </ul>
         <div class="collect">
           <span class="ico"></span>
-          <span>收藏宝贝 (<i>17937</i> 人气)</span>
+          <span>收藏宝贝 (<i class="data-collect"></i> 人气)</span>
         </div>
       </div>
       <div class="lg-infos">
-        <h5 class="title">Pure cashmere 英单客供 羊绒帽子女双色双层边男潮秋冬季保暖针织</h5>
-        <div class="samll"><img src="../img/detail/store0.png" alt=""> 海量新品 潮流穿搭 玩趣互动</div>
+        <h5 class="title data-infos-title"></h5>
+        <div class="samll"><img src="../img/detail/store0.png" alt="" class="data-infos-logo"><em
+            class="data-info-xc"></em></div>
         <ul class="price-wrap">
           <li>
             价格 <strong>
-              <i>￥</i>
-              <i>398.00</i>
+              <strong>￥</strong>
+              <i class="data-infos-price"></i>
             </strong>
             <div class="total-info">
               <p>
-                <span>1018</span>
+                <span class="data-infos-pl"></span>
                 累计评论
               </p>
               <p>
-                <span>38</span>
+                <span class="data-infos-jy"></span>
                 交易成功
               </p>
             </div>
           </li>
           <li>
             淘宝价
-            <span>￥198.00</span>
+            <span>￥<i class="data-infos-taobao-price"></i></span>
             <i>专属优惠</i>
           </li>
           <li>
@@ -146,24 +131,85 @@
           </p>
           <div class="size">
             <span>尺寸</span>
-            <a href="#">可调节</a>
-
+            <em class="ass">
+            </em>
           </div>
           <div class="color">
             <span>颜色选择</span>
-            <ul>
-              <li>红色</li>
-              <li>蓝色</li>
-              <li>白色</li>
-              <li>黑色</li>
+            <ul class="data-infos-color">
             </ul>
+          </div>
+          <div class="num">
+            <span>数量</span>
+            <strong>
+              <button class="num-div"> - </button>
+              <input type="text" value="1" class="now-num">
+              <button class="num-add"> + </button>
+              件(库存<i class="data-max-num"></i>件)
+            </strong>
+          </div>
+          <div class="huabei">
+            <span>花呗分期</span>
+            <ul class="data-infos-huabei">
+            </ul>
+          </div>
+          <div class="join">
+            <a>分期购买</a>
+            <a> <i class="iconfont icon-gouwuche"></i> 加入购物车</a>
+          </div>
+          <div class="promise">
+            <span>承诺</span>
+            <img src="../img/detail/promise (1).jpg" alt="">
+            7天无理由
+          </div>
+          <div class="play">
+            <span>支付</span>
+            <img src="../img/detail/promise (2).png" alt=""> 蚂蚁花呗<img src="../img/detail/promise (3).png"
+              alt="">信用卡支付<img src="../img/detail/promise (1).png" alt="">集分宝
           </div>
         </div>
       </div>
       <div class="lg-store">
-
+        <div class="imgs1">
+          <img src="../img/detail/store.png" alt="">
+          <div class="dask">
+            <img src="..//img/detail/store-jp.png" alt="">
+          </div>
+        </div>
+        <div class="old-store">
+          <i><img src="../img/detail/store-small.png" alt=""></i>
+          <em class="data-info-old"></em>
+          <span>年老店</span>
+        </div>
+        <ul class="store-about">
+          <li class="data-infos-storeName">
+          </li>
+          <li>
+            信誉：<a href="#" class="data-inofs-promise"></a>
+          </li>
+          <li>掌柜：<em class="data-infos-storeboss"></em></li>
+          <li>联系：<i></i></li>
+          <li><em>资质：</em><i></i><span></span></li>
+        </ul>
+        <ul class="store-desc">
+          <li>描述<span>4.9</span></li>
+          <li>服务<span>4.9</span></li>
+          <li>物流<span>4.9</span></li>
+        </ul>
+        <div class="store-look-again">
+          <h5>看了又看</h5>
+          <div class="again">
+            <a href="./detail.html">
+              <img src="../img/detail/goods(1).jpg" alt="">
+              <span>¥158.00</span>
+            </a>
+            <a href="./detail.html">
+              <img src="../img/detail/home-img (1).png" alt="">
+              <span>¥188.00</span>
+            </a>
+          </div>
+        </div>
       </div>
-
     </div>
   </div>
   @@include('./common/footNav.html');

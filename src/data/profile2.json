@@ -6,7 +6,7 @@
       "info": "无线耳机",
       "cont": [
         {
-          "pid": 40,
+          "pid": 6,
           "img": "../img/profile2/recom1 (3).jpg",
           "price":29.9,
           "tit": "双耳无线蓝牙耳机入耳式耳塞运动跑步",
@@ -18,7 +18,7 @@
           "suduPf": 4.7
         },
         {
-          "pid": 40,
+          "pid": 6,
           "img": "../img/profile2/recom1 (2).jpg",
           "price":339.00,
           "tit": "1MORE/万魔舒适豆真无线蓝牙耳机",
@@ -30,7 +30,7 @@
           "suduPf": 4.9
         },
         {
-          "pid": 40,
+          "pid": 6,
           "img": "../img/profile2/recom1 (4).jpg",
           "price":29.9,
           "tit": "奥风S15双耳真无线蓝牙耳机超长待机运",
@@ -42,7 +42,7 @@
           "suduPf": 4.8
         },
         {
-          "pid": 40,
+          "pid": 6,
           "img": "../img/profile2/recom1 (1).jpg",
           "price":24.00,
           "tit": "柏图真无线主动隆噪耳机耳塞式入耳式蓝",
@@ -54,7 +54,7 @@
           "suduPf": 4.9
         },
         {
-          "pid": 40,
+          "pid": 6,
           "img": "../img/profile2/recom1 (5).jpg",
           "price":49.00,
           "tit": "huawei华为无线蓝牙耳机超长待机双耳入",

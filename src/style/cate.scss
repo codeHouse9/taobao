@@ -94,9 +94,6 @@ $bg: -webkit-linear-gradient(left, #ff9000 0, #ff5000 100%);
         color: $c3;
         margin-right: 4px;
         padding-top: 5px;
-        &:hover {
-          color: $color;
-        }
         &:nth-child(3) {
           color: $color;
         }
@@ -271,11 +268,15 @@ $bg: -webkit-linear-gradient(left, #ff9000 0, #ff5000 100%);
           flex-wrap: wrap;
           width: 252px;
           a {
-            padding: 2px 0;
+            display: block;
+            padding: 3px 0;
             margin-right: 10px;
             color: #6c6c6c;
             width: 48px;
             height: 22px;
+            &:hover {
+              color: $color;
+            }
           }
         }
       }
