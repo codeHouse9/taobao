@@ -248,7 +248,7 @@ $.ajax({
   url: './data/profile2.json',
   method: 'get',
   success(data) {
-    console.log(data);
+    // console.log(data);
     let str = '';
     for (let i = 0; i < data.list.length; i++) {
       str += `
@@ -267,7 +267,7 @@ $.ajax({
     for (let i = 0, len = data.length; i < len; i++) {
       mayLikeStr += `
         <li>
-          <a href="./views/detail.html?pid=${data[i].pid}">
+          <a href="./views/cate.html">
             <img src="${data[i].img}" alt="">
             <h4><img src="./img/home/may-like-bdy.png" style="display:${data[i].titleImg ? 'inline-block' : 'none'}" alt=""> ${data[i].title}
             </h4>
@@ -360,4 +360,29 @@ $(".miaodian").on('click', 'a', function (e) {
       break;
   }
 
+})
+// 文件夹放置问题，需重定向路径
+$('.qdl').click(function (e) {
+  location.href = './views/login.html';
+  e.preventDefault();
+})
+// 注册
+$(".mfzc").click(function (e) {
+  location.href = './views/register.html';
+  e.preventDefault();
+})
+// 我的淘宝
+$(".me").click(function (e) {
+  location.href = './views/me.html';
+  e.preventDefault();
+})
+// 我的淘宝
+$(".mycart").click(function (e) {
+  location.href = './views/cart.html';
+  e.preventDefault();
+})
+// 我的淘宝
+$(".shopcart").click(function (e) {
+  location.href = './views/cate.html';
+  e.preventDefault();
 })

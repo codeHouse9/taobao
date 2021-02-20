@@ -17,24 +17,25 @@ import './headNav.js';
     }
     if (acount) {
       let flag = acount.find(item => {
-        return user === item[0];
+        return user === item.user;
       })
       if (flag) {
         alert('用户已存在，请重新输入')
         return;
       }
       else {
-        acount.push([user, pass, '../../img/home/b1.jpg']);
+        //[user, pass, '../../img/home/b1.jpg']
+        acount.push({ user, pass });
         localStorage.setItem('acount', JSON.stringify(acount));
         alert('注册成功！点击跳转至登录');
-        location.href = 'login.html';
+        location.href = './login.html';
       }
     } else {
       acount = [];
-      acount.push([user, pass]);
+      acount.push({ user, pass });
       localStorage.setItem('acount', JSON.stringify(acount));
       alert('注册成功！点击跳转至登录');
-      location.href = 'login.html';
+      location.href = './login.html';
     }
   })
 })();

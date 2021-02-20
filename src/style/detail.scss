@@ -393,8 +393,14 @@
       }
       .color {
         display: flex;
+        margin-bottom: 30px;
+        span {
+          width: 55px;
+        }
         ul {
           display: flex;
+          flex-wrap: wrap;
+
           li {
             padding: 1px 5px;
             border: 1px solid #dcdcdc;
@@ -403,6 +409,7 @@
             color: #3c3c3c;
             cursor: pointer;
             margin-right: 5px;
+            margin-bottom: 5px;
             &:hover {
               border-color: #ff4400;
             }
@@ -452,6 +459,10 @@
             text-align: center;
             height: 48px;
             border: 1px solid #c3c3c3;
+            cursor: pointer;
+            &:hover {
+              border: 1px solid #f40;
+            }
           }
         }
       }

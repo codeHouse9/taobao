@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>淘宝网-我的购物车</title>
+  <link rel="stylesheet" href="../style/cart.css">
+</head>
+
+<body>
+  @@include('./common/headNav.html');
+  <!-- 头部搜索 -->
+  <div class="cart-head w">
+    <h1>
+      <a href="../index.html">
+      </a>
+    </h1>
+    <div class="search">
+      <div class="search-recom">
+        <span> 宝贝 <span class="iconfont icon-xiajiantou"></span></span>
+        <div class="search-hide">
+          <span>店铺</span>
+          <span>天猫</span>
+        </div>
+      </div>
+      <input type="text" class="iconfont icon-sousuo">
+      <button>搜索</button>
+    </div>
+  </div>
+  <div class="cart-main w">
+    <div class="main-head">
+      <ul class="head-list">
+        <li class="active">全部商品<span class="list-number">2</span></li>
+        <li>降价商品<span class="list-number">0</span></li>
+        <li>库存紧张<span class="list-number">1</span></li>
+      </ul>
+      <div class="head-total">
+        快选择你的商品吧！
+      </div>
+    </div>
+    <div class="main-bd">
+      <ul class="bd-head">
+        <li><input type="checkbox" id="selectAll"><label for="selectAll">全选</label></li>
+        <li>商品信息</li>
+        <li>单价</li>
+        <li>数量</li>
+        <li>金额</li>
+        <li>操作</li>
+      </ul>
+      <ul class="bd-cont">
+        <!-- <li class="nowShop">
+          <h3>
+            <input type="checkbox">
+            <span></span> 店铺：
+            <a href="./detail.html?pid=0">李医生化妆品旗舰</a>
+            <i></i>
+          </h3>
+          <div class="shop-infos">
+            <input type="checkbox">
+            <div class="imgs">
+              <img src="../img/cart/1.png" alt="">
+            </div>
+            <div class="tit">
+              <a href="./detail.html?pid=1">【过年不打烊】李医生去角质黑头面部女男士全身去死皮慕斯脸部深层清洁收缩毛孔</a>
+              <div class="small-ico">
+                <img src="../img/cart/small-ico (1).png" alt="">
+                <img src="../img/cart/small-ico (2).png" alt="">
+                <img src="../img/cart/small-ico (3).png" alt="">
+              </div>
+            </div>
+            <div class="alter">
+              <div class="pend"></div>
+              <div class="size">化妆品净含量：300g</div>
+              <div class="color">化妆品净含量：300g</div>
+              <div class="alter-cont">
+                <div class="angle"></div>
+                <div class="left">暂不支持修改，哈哈哈，有点累了<button class="closeThis">关闭</button></div>
+              </div>
+            </div>
+            <div class="unit-price">
+              <span class="old-price">￥160.00</span>
+              <span class="new-price">￥62.90</span>
+            </div>
+            <div class="number">
+              <div class="change">
+                <button class="num-div"> - </button>
+                <input type="text" value="1" class="now-num">
+                <button class="num-add"> + </button>
+              </div>
+              <div class="limit">限购 <span class="data-max-num">10</span> 件</div>
+            </div>
+            <div class="amount">￥129.80</div>
+            <div class="operating">
+              <button>移入收藏夹</button>
+              <button class="delShop">删除</button>
+              <button>相似宝贝</button>
+            </div>
+          </div>
+        </li> -->
+      </ul>
+    </div>
+    <div class="main-foot">
+      <div class="foot-left">
+        <input type="checkbox" id="selectAll2">
+        <label for="selectAll2">全选</label>
+        <button class="del">删除</button>
+        <button class="remove">移入收藏夹</button>
+        <button class="share">分享</button>
+      </div>
+      <div class="foot-right">
+        <div class="selected">已选商品 <span class="selecedNum">0</span> 件</div>
+        <div class="total">合计（不含运费）：<i>￥</i><span class="totalPrice">0.00</span></div>
+        <button class="settle">结算</button>
+      </div>
+    </div>
+  </div>
+
+  @@include('./common/footNav.html');
+  <script src="../js/cart.js" type="module"></script>
+</body>
+
+</html>

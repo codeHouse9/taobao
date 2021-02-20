@@ -3,12 +3,13 @@ import './jquery-3.4.1.js';
 let isLogin = JSON.parse(localStorage.getItem('isLogin'));
 if (isLogin) {
   if (isLogin.logined) {
-    console.log(isLogin.logined);
+    console.log(11);
     $("#login-name").val(isLogin.user);
     $("#login-pass").val(isLogin.pass);
   } else {
-    alert('已登录 跳转中...')
-    location.href = '../index.html';
+    console.log(22);
+    $("#login-name").val('');
+    $("#login-pass").val('');
   }
 }
 // 切换登录方式
@@ -23,10 +24,11 @@ $("#pass-login").click(function () {
   let acount = JSON.parse(localStorage.getItem('acount'));
   if (acount) {
     let flag = acount.find(item => {
-      return (user === item[0] && pass === item[1]);
+      //(user === item[0] && pass === item[1]);
+      return (user === item.user && pass === item.pass);
     })
     if (flag) {
-      localStorage.setItem('isLogin', '{"logined": true, "user": "' + user + '" , "pass": "' + pass + '"}')
+      localStorage.setItem('isLogin', '{"logined": ' + true + ', "user": "' + user + '" , "pass": "' + pass + '"}')
       $(this).text('登陆中...');
       setTimeout(() => {
         location.href = '../index.html';
