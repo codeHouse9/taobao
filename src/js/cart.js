@@ -72,7 +72,9 @@ if (acount) {
     let data = JSON.parse(e.newValue);
     if (data) {
       updata(data[0].shop);
-      //
+      // 商品列表数量
+      $('.allSelected').text($('.bd-cont .shop-infos input[type=checkbox]').length);
+      //全选
       if ($('#selectAll').prop('checked')) {
         $('.bd-cont input[type=checkbox]').prop('checked', true);
       }
@@ -208,7 +210,6 @@ $('.now-num').change(function () {
       id = id.slice(id.indexOf(' ')).trim();
       if ('id' + item.id == id) {
         item.num = shopNum;
-        console.log(item.num);
       }
     })
     localStorage.setItem('acount', JSON.stringify(acount));
@@ -240,6 +241,18 @@ $(".delShop").click(function () {
   } else {
     $('.settle').css('backgroundColor', '#b0b0b0');
   }
+  // 修改本地数量
+  let data = acount.find(item => {
+    return (item.user === isLogin.user && item.pass === isLogin.pass)
+  })
+  data.shop.forEach(item => {
+    let id = $(this).parents('.nowShop')[0].className;
+    id = id.slice(id.indexOf(' ')).trim();
+    if ('id' + item.id == id) {
+      data.shop.splice(id, 1);
+    }
+  })
+  localStorage.setItem('acount', JSON.stringify(acount));
 })
 // 修改商品
 $(".alter .pend").mouseover(function () {
@@ -276,6 +289,8 @@ $('#selectAll').click(function () {
 $('#selectAll2').click(function () {
   $('#selectAll').click();
 })
+// 商品列表数量
+$('.allSelected').text($('.bd-cont .shop-infos input[type=checkbox]').length);
 // 单选
 $('.bd-cont input[type=checkbox]').click(function () {
   checkLen = $('.bd-cont input[type=checkbox]').length;

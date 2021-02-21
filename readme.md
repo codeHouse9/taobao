@@ -1,4 +1,5 @@
 # 淘宝
+## 项目在线地址： https://codehouse9.gitee.io/taobao
 ## 运行该项目
 ### 已下载的情况下
 1. npm i 下载所需要的的依赖

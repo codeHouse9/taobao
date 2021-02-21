@@ -105,6 +105,10 @@
           font-size: 14px;
           border-right: 1px solid #e9e7e7;
         }
+        cursor: not-allowed;
+        &.active {
+          cursor: pointer;
+        }
       }
     }
     .head-total {
