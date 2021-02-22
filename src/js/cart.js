@@ -388,9 +388,17 @@ $('.delSelected').click(function () {
   }
   // 商品列表数量
   $('.allSelected').text($('.bd-cont .shop-infos input[type=checkbox]').length);
-  // 购物车布局数量
+  // 购物车局部数量
   let total = data.shop.reduce((total, item) => {
     return total += item.num
   }, 0)
   $('.cartNum').text(total);
+  // 已选商品数量
+  selected = $('.bd-cont .shop-infos input[type=checkbox]:checked');
+  $(".selecedNum").text(selected.length);
+  // 总价
+  selected.each((index, item) => {
+    total += parseFloat($(item).siblings('.amount').find('.amountPrice').text());
+  })
+  $('.totalPrice').text(total.toFixed(2));
 })
