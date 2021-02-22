@@ -16,6 +16,7 @@ $(".user-info .tuichu").click(function () {
   localStorage.setItem('isLogin', JSON.stringify(isLogin));
   $(".to-login").css('display', 'block');
   $('.isLogin .user').css('display', 'none');
+  $(".home-user").text('游客');
 })
 
 // 判断用户是否已经登录过

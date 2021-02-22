@@ -131,6 +131,12 @@ $('.num-div').click(function () {
     }
   })
   localStorage.setItem('acount', JSON.stringify(acount));
+  total = 0;
+  // 购物车布局数量
+  total = data.shop.reduce((total, item) => {
+    return total += item.num
+  }, 0)
+  $('.cartNum').text(total);
 })
 
 // 加
@@ -173,10 +179,14 @@ $(".num-add").on('click', function (e) {
     id = id.slice(id.indexOf(' ')).trim();
     if ('id' + item.id == id) {
       item.num = shopNum;
-      console.log(item.num);
     }
   })
   localStorage.setItem('acount', JSON.stringify(acount));
+  // 购物车布局数量
+  total = data.shop.reduce((total, item) => {
+    return total += item.num
+  }, 0)
+  $('.cartNum').text(total);
 })
 // 超出库存限制
 $(".now-num").focus(function () {
@@ -253,6 +263,18 @@ $(".delShop").click(function () {
     }
   })
   localStorage.setItem('acount', JSON.stringify(acount));
+  // 判断是否该全选
+  checkLen = $('.bd-cont input[type=checkbox]').length;
+  if (!checkLen) {
+    $('#selectAll').prop('checked', false);
+    $('#selectAll2').prop('checked', false);
+  }
+  // 商品列表数量
+  $('.allSelected').text($('.bd-cont .shop-infos input[type=checkbox]').length);
+  let cartNum = data.shop.reduce((total, item) => {
+    return total += item.num
+  }, 0)
+  $('.cartNum').text(cartNum);
 })
 // 修改商品
 $(".alter .pend").mouseover(function () {
@@ -293,9 +315,9 @@ $('#selectAll2').click(function () {
 $('.allSelected').text($('.bd-cont .shop-infos input[type=checkbox]').length);
 // 单选
 $('.bd-cont input[type=checkbox]').click(function () {
-  checkLen = $('.bd-cont input[type=checkbox]').length;
   let nowCheckBox = $(this).parents('.shop-infos').prev('h3').children('input[type=checkbox]').length ? $(this).parents('.shop-infos').prev('h3').children('input[type=checkbox]') : $(this).parent('h3').next('.shop-infos').find('input[type=checkbox]');
   nowCheckBox.prop('checked', $(this).prop('checked'));
+  checkLen = $('.bd-cont input[type=checkbox]').length;
   if ($('.bd-cont input[type=checkbox]:checked').length === checkLen) {
     $('#selectAll').prop('checked', true);
     $('#selectAll2').prop('checked', true);
@@ -317,6 +339,13 @@ $('.bd-cont input[type=checkbox]').click(function () {
   } else {
     $('.settle').css('backgroundColor', '#b0b0b0');
   }
+  // 判断是否该全选
+  checkLen = $('.bd-cont input[type=checkbox]').length;
+  if (!checkLen) {
+    $('#selectAll').prop('checked', false);
+    $('#selectAll2').prop('checked', false);
+  }
+
 })
 // 结算
 $('.settle').click(function () {
@@ -331,3 +360,37 @@ $('.settle').click(function () {
     alert('请选择商品!');
   }
 });
+// 删除勾选
+$('.delSelected').click(function () {
+  selected = $('.bd-cont .shop-infos input[type=checkbox]:checked').parents('.nowShop');
+  // 删除本地勾选数据
+  let data = acount.find(item => {
+    return (item.user === isLogin.user && item.pass === isLogin.pass)
+  })
+  data.shop.forEach(item => {
+    selected.each((index, val) => {
+      let id = val.className;
+      id = id.slice(id.indexOf(' ')).trim();
+      if ('id' + item.id == id) {
+        data.shop.splice(id, 1);
+      }
+    })
+  })
+  localStorage.setItem('acount', JSON.stringify(acount));
+
+  // 局部删除
+  selected.remove();
+  // 判断是否该全选
+  checkLen = $('.bd-cont input[type=checkbox]').length;
+  if (!checkLen) {
+    $('#selectAll').prop('checked', false);
+    $('#selectAll2').prop('checked', false);
+  }
+  // 商品列表数量
+  $('.allSelected').text($('.bd-cont .shop-infos input[type=checkbox]').length);
+  // 购物车布局数量
+  let total = data.shop.reduce((total, item) => {
+    return total += item.num
+  }, 0)
+  $('.cartNum').text(total);
+})

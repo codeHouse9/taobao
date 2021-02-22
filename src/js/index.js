@@ -386,3 +386,4 @@ $(".shopcart").click(function (e) {
   location.href = './views/cate.html';
   e.preventDefault();
 })
+$(".home-user").text($('.user-name').text());
