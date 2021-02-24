@@ -10,11 +10,6 @@ $(".delivery .size .ass").on('click', 'a', function (e) {
   $(e.target).addClass('active').siblings('a').removeClass('active');
   sizeVal = $(e.target).text();
 })
-$(".lg-wrap .data-lg-list").on('mouseenter', 'li', function (e) {
-  $(e.target).addClass('lg-list-active').siblings('li').removeClass('lg-list-active')
-  let src = $(e.target).children('img').attr('src');
-  $(".lg-wrap >.lg-imgs >.imgs>img").attr('src', src);
-})
 
 $(".lg-wrap>.lg-imgs>.imgs").mousemove(function (e) {
   let x = e.clientX - this.offsetLeft;
@@ -23,11 +18,6 @@ $(".lg-wrap>.lg-imgs>.imgs").mousemove(function (e) {
     backgroundPositionX: - x - 20,
     backgroundPositionY: -y - 20
   })
-})
-
-$(".lg-wrap>.lg-imgs>.imgs").mouseover(function () {
-  let src = $(this).children('img').attr('src');
-  $(".lg-wrap>.lg-imgs>.imgs>.show-lg-img").css('background-image', "url(" + src + ")");
 })
 
 // 获取请求数据的pid
@@ -115,7 +105,7 @@ $.ajax({
           $(".main-head").css('backgroundImage', 'url(' + item.changeImg + ')');
         }
         $(".data-lgImgs").attr('src', item.lgImgs);
-        $(".show-lg-img").css('background-image', 'url(' + item.lgImgs + ')');
+        $(".lg-wrap .imgs .show-lg-img").css('backgroundImage', "url(" + item.lgImgs + ")");
 
         dataStr = '';
         for (let i = 0; i < item.lgList.length; i++) {
@@ -288,7 +278,7 @@ $.ajax({
               $(".cartNum").text(changeNum(data));
             })
             alert('添加购物车成功！');
-            location.href = './cart.html';
+            // location.href = './cart.html';
           } else {
             alert('请把参数填完整！')
           }
@@ -297,3 +287,12 @@ $.ajax({
     })
   }
 })
+window.onload = function () {
+  $(".lg-wrap .data-lg-list").on('click', 'li', function (e) {
+    $(this).addClass('lg-list-active').siblings('li').removeClass('lg-list-active')
+    let src = $(this).children('img').attr('src');
+    $(".lg-wrap >.lg-imgs >.imgs>img").attr('src', src);
+    console.log(src);
+    $(".lg-wrap .imgs .show-lg-img").css('backgroundImage', "url(" + src + ")");
+  })
+}
