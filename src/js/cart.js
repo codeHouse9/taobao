@@ -113,10 +113,13 @@ $('.num-div').click(function () {
   // 已选商品数量
   selected = $('.bd-cont .shop-infos input[type=checkbox]:checked');
   // 总价
-  selected.each((index, item) => {
-    total += parseFloat($(item).siblings('.amount').find('.amountPrice').text());
-  })
-  $('.totalPrice').text(total.toFixed(2));
+  total = 0;
+  if (selected.length) {
+    selected.each((index, item) => {
+      total += parseFloat($(item).siblings('.amount').find('.amountPrice').text());
+    })
+    $('.totalPrice').text(total.toFixed(2));
+  }
   total = 0;
   // 存储数量
   let data = acount.find(item => {
@@ -127,7 +130,6 @@ $('.num-div').click(function () {
     id = id.slice(id.indexOf(' ')).trim();
     if ('id' + item.id == id) {
       item.num = shopNum;
-      console.log(item.num);
     }
   })
   localStorage.setItem('acount', JSON.stringify(acount));
@@ -165,10 +167,13 @@ $(".num-add").on('click', function (e) {
   // 已选商品数量
   selected = $('.bd-cont .shop-infos input[type=checkbox]:checked');
   // 总价
-  selected.each((index, item) => {
-    total += parseFloat($(item).siblings('.amount').find('.amountPrice').text());
-  })
-  $('.totalPrice').text(total.toFixed(2));
+  total = 0;
+  if (selected.length) {
+    selected.each((index, item) => {
+      total += parseFloat($(item).siblings('.amount').find('.amountPrice').text());
+    })
+    $('.totalPrice').text(total.toFixed(2));
+  }
   total = 0;
   // 存储数量
   let data = acount.find(item => {
@@ -241,6 +246,7 @@ $(".delShop").click(function () {
   selected = $('.bd-cont .shop-infos input[type=checkbox]:checked');
   $(".selecedNum").text(selected.length);
   // 总价
+  total = 0;
   selected.each((index, item) => {
     total += parseFloat($(item).siblings('.amount').find('.amountPrice').text());
   })
@@ -297,6 +303,7 @@ $('#selectAll').click(function () {
   selected = $('.bd-cont .shop-infos input[type=checkbox]:checked');
   $(".selecedNum").text(selected.length);
   // 总价
+  total = 0;
   selected.each((index, item) => {
     total += parseFloat($(item).siblings('.amount').find('.amountPrice').text());
   })
@@ -329,6 +336,7 @@ $('.bd-cont input[type=checkbox]').click(function () {
   selected = $('.bd-cont .shop-infos input[type=checkbox]:checked');
   $(".selecedNum").text(selected.length);
   // 总价
+  total = 0;
   selected.each((index, item) => {
     total += parseFloat($(item).siblings('.amount').find('.amountPrice').text());
   })
@@ -349,7 +357,6 @@ $('.bd-cont input[type=checkbox]').click(function () {
 })
 // 结算
 $('.settle').click(function () {
-  console.log(selected);
   if (selected) {
     if (selected.length) {
       alert('结算成功！\n商品 ' + $('.selecedNum').text() + '件     数量：' + $('.cartNum').text() + '    总价：' + $('.totalPrice').text())
@@ -367,15 +374,22 @@ $('.delSelected').click(function () {
   let data = acount.find(item => {
     return (item.user === isLogin.user && item.pass === isLogin.pass)
   })
+  let delArr = [];
   data.shop.forEach(item => {
     selected.each((index, val) => {
       let id = val.className;
       id = id.slice(id.indexOf(' ')).trim();
       if ('id' + item.id == id) {
-        data.shop.splice(id, 1);
+        delArr.push(id);
+        console.log(delArr);
       }
     })
   })
+  if (delArr.length) {
+    delArr.forEach(item => {
+      data.shop.splice(item, 1);
+    })
+  }
   localStorage.setItem('acount', JSON.stringify(acount));
 
   // 局部删除
@@ -397,6 +411,7 @@ $('.delSelected').click(function () {
   selected = $('.bd-cont .shop-infos input[type=checkbox]:checked');
   $(".selecedNum").text(selected.length);
   // 总价
+  total = 0;
   selected.each((index, item) => {
     total += parseFloat($(item).siblings('.amount').find('.amountPrice').text());
   })

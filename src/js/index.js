@@ -221,7 +221,7 @@ $.ajax({
     for (let i = 0, len = data.length; i < len; i++) {
       popularStr += `
         <li>
-          <a href="./views/detail.html?pid=${data[i].pid}">
+          <a href="./views/cate.html">
             <div class="imgs"></div>
             <p class="popular-desc"><img src="${data[i].descImg}" alt="" style="display: ${data[i].descImg ? "inline-block" : "none"}">${data[i].desc}</p>
             <p class="popular-liked">

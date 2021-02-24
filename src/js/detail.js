@@ -95,8 +95,10 @@ $(".now-num").change(function () {
 
 // 花呗分期
 $(".data-infos-huabei").on('click', 'li', function (e) {
-  $(e.target).css('border', '1px solid #f40').siblings('li').css('border-color', '');
-  fqgm = $(e.target).find('em').text();
+  if (e.target.tagName == 'LI') {
+    $(e.target).css('border', '1px solid #f40').siblings('li').css('border-color', '');
+    fqgm = $(e.target).find('em').text();
+  }
 })
 // 渲染数据
 $.ajax({
@@ -153,6 +155,7 @@ $.ajax({
         $(".delivery .size .ass").html(dataStr);
         if (item.info.size.length == 1) {
           $(".delivery .size .ass a").addClass('active');
+          sizeVal = $('.active').text();
         }
         dataStr = '';
         for (let i = 0; i < item.info.color.length; i++) {
